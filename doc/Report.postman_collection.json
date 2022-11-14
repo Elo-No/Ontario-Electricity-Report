@@ -1,0 +1,241 @@
+{
+
+	"item": [
+		{
+			"name": "Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"demand\": [\r\n        {\r\n            \"date\": \"2022-10-17\",\r\n            \"hour\": 2,\r\n            \"market_demand\": 21058,\r\n            \"ontario_demand\": 18696\r\n        },\r\n        {\r\n            \"date\": \"2022-10-17\",\r\n            \"hour\": 3,\r\n            \"market_demand\": 21058,\r\n            \"ontario_demand\": 18696\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/reports/demand/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"reports",
+						"demand",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Dmand Objs",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"demand\": [\r\n        {\r\n            \"date\": \"2022-10-17\",\r\n            \"hour\": 1,\r\n            \"market_demand\": 21058,\r\n            \"ontario_demand\": 18696\r\n        },\r\n        {\r\n            \"date\": \"2022-10-16\",\r\n            \"hour\": 1,\r\n            \"market_demand\": 21058,\r\n            \"ontario_demand\": 18696\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/reports/demand/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"demand",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 13 Nov 2022 21:46:00 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "184"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"demand\": [\n        {\n            \"date\": \"2022-10-17T00:00:00Z\",\n            \"hour\": 1,\n            \"market_demand\": 21058,\n            \"ontario_demand\": 18696\n        },\n        {\n            \"date\": \"2022-10-16T00:00:00Z\",\n            \"hour\": 1,\n            \"market_demand\": 21058,\n            \"ontario_demand\": 18696\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/reports/?date_start=2022-10-16&date_end=2022-10-18",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"reports",
+						""
+					],
+					"query": [
+						{
+							"key": "date_start",
+							"value": "2022-10-16"
+						},
+						{
+							"key": "date_end",
+							"value": "2022-10-18"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "List By Filter",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/reports/?date_start=2022-10-16&date_end=2022-10-18",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								""
+							],
+							"query": [
+								{
+									"key": "date_start",
+									"value": "2022-10-16"
+								},
+								{
+									"key": "date_end",
+									"value": "2022-10-18"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 13 Nov 2022 21:58:42 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.8.0"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "280"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 5,\n        \"date\": \"2022-10-16T00:00:00Z\",\n        \"hour\": 1,\n        \"market_demand\": 21058,\n        \"ontario_demand\": 18696\n    },\n    {\n        \"id\": 4,\n        \"date\": \"2022-10-17T00:00:00Z\",\n        \"hour\": 1,\n        \"market_demand\": 21058,\n        \"ontario_demand\": 18696\n    },\n    {\n        \"id\": 1,\n        \"date\": \"2022-10-18T00:00:00Z\",\n        \"hour\": 1,\n        \"market_demand\": 21058,\n        \"ontario_demand\": 18696\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/reports/demand/2022-10-17/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"reports",
+						"demand",
+						"2022-10-17",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
